@@ -1,0 +1,139 @@
+html, body {
+    width: 100%; /* Breite auf 100% setzen */
+    height: 100%; /* Höhe auf 100% setzen */
+    margin: 0; /* Entfernt den Standard-Margin */
+    overflow: hidden; /* Verhindert Scrollen */
+}
+
+body {
+    background-color: #121212; /* Hintergrundfarbe für den Rest der Seite */
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    display: flex; /* Flexbox für die Anordnung */
+    flex-direction: column; /* Vertikale Anordnung */
+    min-height: 100vh; /* Mindestens 100% der Ansichtshöhe */
+}
+
+header {
+    display: flex; /* Flexbox aktivieren */
+    align-items: center; /* Vertikale Ausrichtung der Elemente */
+    justify-content: space-between; /* Platz zwischen den Elementen */
+    background-color: #1e1e1e;
+    padding: 10px; /* Kleinere Polsterung für den Header */
+}
+
+h1 {
+    flex: 1; /* Nimmt den verfügbaren Platz ein und zentriert den Text */
+    text-align: center; /* Zentriert den Text */
+    margin: 0; /* Entfernt den Standard-Margin */
+}
+
+nav {
+    margin-top: 10px; /* Abstand zwischen Header und Navigation */
+}
+
+nav a {
+    color: #ffffff; /* Textfarbe der Links */
+    margin: 0 15px; /* Abstand zwischen den Links */
+    text-decoration: none; /* Entfernt die Unterstreichung */
+}
+
+nav a:hover {
+    text-decoration: underline; /* Unterstreichung beim Hover */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.profile-pic {
+    width: 80px; /* Größe des Profilbildes */
+    height: 80px; /* Größe des Profilbildes */
+    border-radius: 50%; /* Macht das Bild rund */
+    object-fit: cover; /* Stellt sicher, dass das Bild gut aussieht */
+    margin-right: 10px; /* Abstand zwischen dem Bild und dem Titel */
+}
+
+.banner-container {
+    position: relative;
+    width: 100%;
+    height: 50vh; /* Höhe auf 50% der Ansichtshöhe setzen */
+    overflow: hidden; /* Versteckt überflüssige Teile */
+}
+
+.banner {
+    width: 100%; /* Breite auf 100% setzen */
+    height: 100%; /* Höhe auf 100% des Containers setzen */
+    object-fit: cover; /* Stellt sicher, dass das Bild gut aussieht */
+}
+
+.info-text {
+    position: absolute; /* Ändert die Positionierung auf absolut */
+    top: 40%; /* Positioniert den Text 30% vom oberen Rand */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Zentriert den Text */
+    color: #ffffff; /* Textfarbe */
+    background-color: rgba(0, 0, 0, 0.7); /* Halbtransparenter Hintergrund */
+    padding: 15px; /* Innenabstand */
+    border-radius: 5px; /* Abgerundete Ecken */
+    max-width: 90%; /* Maximale Breite des Textfeldes */
+    margin: 0 auto; /* Zentriert das Textfeld */
+}
+
+.about-text {
+    font-size: 0.5em; /* Kleinste Schriftgröße für den Über uns Text */
+}
+
+.social-links {
+    display: flex; /* Flexbox für die sozialen Medien */
+    flex-wrap: wrap; /* Erlaubt Zeilenumbruch */
+    justify-content: center; /* Zentriert die Knöpfe */
+    margin-top: 10px;
+}
+
+.social-button {
+    background-color: #1e90ff; /* Hintergrundfarbe der Knöpfe */
+    color: #ffffff; /* Textfarbe */
+    padding: 10px 15px; /* Innenabstand */
+    margin: 5px; /* Abstand zwischen den Knöpfen */
+    border: none; /* Entfernt den Rahmen */
+    border-radius: 5px; /* Abgerundete Ecken */
+    text-decoration: none; /* Entfernt die Unterstreichung */
+    transition: background-color 0.3s; /* Übergangseffekt */
+}
+
+.social-button:hover {
+    background-color: #007acc; /* Dunklere Farbe beim Hover */
+}
+
+section {
+    padding: 20px;
+    flex:auto; /* Nimmt den verfügbaren Platz ein */
+}
+
+footer {
+    background-color: #1e1e1e; /* Hintergrundfarbe des Footers */
+    padding: 10px; /* Innenabstand */
+    font-size: 0.8em; /* Kleinste Schriftgröße */
+    position: fixed; /* Fixiert den Footer am unteren Rand */
+    bottom: 0; /* Setzt den Footer an den unteren Rand */
+    left: 0; /* Setzt den Footer an den linken Rand */
+    right: 0; /* Setzt den Footer an den rechten Rand */
+}
+
+@media (max-width: 600px) {
+    .profile-pic {
+        width: 60px; /* Kleinere Größe auf kleinen Bildschirmen */
+        height: 60px; /* Kleinere Größe auf kleinen Bildschirmen */
+    }
+
+    .info-text {
+        padding: 5px; /* Weniger Innenabstand auf kleinen Bildschirmen */
+    }
+
+    .social-button {
+        padding: 8px 10px; /* Kleinere Knopfgröße auf kleinen Bildschirmen */
+    }
+}
